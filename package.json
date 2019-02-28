@@ -1,0 +1,10 @@
+{
+  "name": "tesonet",
+  "version": "1.0.0",
+  "private": true,
+  
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jasmine": "^3.3.1"
+  }
+}
