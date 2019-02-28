@@ -13,18 +13,15 @@ async function getFinalResponse() {
   const { data } = await getCredentialsResponse()
 
   return await axios({
-      method: 'post',
-      url: data.targetUrl,
-      auth: {
-        username: data.username,
-        password: data.password
-      }
-    }).catch (error => {
-      console.log('"post" failed with the error: ', error);
-    });
+    method: 'post',
+    url: data.targetUrl,
+    auth: {
+      username: data.username,
+      password: data.password
+    }
+  }).catch (error => {
+    console.log('"post" failed with the error: ', error);
+  });
 };
-
-getCredentialsResponse().then(({data}) => console.log(data));
-getFinalResponse().then(({data}) => console.log(data));
 
 module.exports = { getCredentialsResponse, getFinalResponse };

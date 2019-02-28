@@ -19,14 +19,13 @@ describe('get credentials request', function() {
     expect(response.data.username).toBeDefined();
     expect(response.data.password).toBeDefined();
   });
-
 });
 
 describe('"post" request', function() {
   let response;
 
   beforeAll(async function() {
-     response = await getFinalResponse();
+    response = await getFinalResponse();
   }, 30000);
   
   it('should return "200" status', function() {
@@ -36,5 +35,4 @@ describe('"post" request', function() {
   it('should have "data"', function() {
     expect(response.data).toBeDefined();
   });
-
 });
